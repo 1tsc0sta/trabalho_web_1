@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contador de clicks</title>
+  </head>
+  <body>
+    <h2>Bem-vindo ao nosso contador de cliques!</h2>
+
+    <div class="container">
+      <p>Contador de clicks</p>
+      <button class="botao">
+        <!--itens do botão-->
+        <span class="texto">Clique!</span>
+      </button>
+    </div>
+    <script>
+      const botao = document.querySelector(".botao");
+      const texto = document.querySelector(".texto");
+      let contador = 0;
+      botao.addEventListener("click", () => {
+        contador++;
+        texto.textContent = `Você clicou ${contador} vezes!`;
+      });
+    </script>
+  </body>
 </html>
